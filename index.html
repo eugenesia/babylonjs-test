@@ -61,7 +61,20 @@
 
         // return created scene.
         return scene;
-      }
+      };
+
+      // Call the createScene function.
+      var scene = createScene();
+
+      // Run the render loop.
+      engine.runRenderLoop(function() {
+        scene.render();
+      });
+
+      // Allow resize.
+      window.addEventListener('resize', function() {
+        engine.resize();
+      });
     });
   </script>
 </body>
