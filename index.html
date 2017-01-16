@@ -47,10 +47,13 @@
         var light = new BABYLON.HemisphericLight(
           'light1',
           new BABYLON.Vector3(0,1,0), scene);
+
+        // Make the light slightly darker.
+        light.intensity = 0.5;
         
         // Create a built-in sphere shape. Constructor takes 5 params:
         // name, width, depth, subdivisions, scene.
-        var sphere = BABYLON.Mesh.CreateSphere('sphere1', 16, 2, scene);
+        var sphere = BABYLON.Mesh.CreateSphere('sphere1', 16, 5, scene);
 
         // Move the sphere upward 1/2 of its height.
         sphere.position.y = 1;
